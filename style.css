@@ -203,7 +203,7 @@ ul li a:hover {
 .grid__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   gap: 70px;
   justify-content: center;
   align-items: center;
@@ -263,6 +263,45 @@ ul li a:hover {
   border-radius: 100%;
   width: 30rem;
 }
+
+.vsu__gate{
+  grid-row: 4;
+  grid-column: 2;
+  border-radius: 100%;
+  width: 30rem;
+  margin-bottom: 50px;
+}
+
+.about__render{
+  grid-row: 4;
+  grid-column: 1;
+}
+
+.scroll__notice {
+  background-color: var(--primary-color-dark);
+  opacity: 90%;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  position: fixed;
+  width: 500px;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  transition: 0.5s ease; /* Updated duration */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll__notice.hidden {
+  opacity: 0%;
+  visibility: hidden;
+}
+
+
 
 
 @media (max-width: 750px) {
@@ -337,57 +376,92 @@ ul li a:hover {
     margin: auto;
   }
 
-/* About */
-.grid__container {
-  display: grid;
-  grid-template-rows: repeat(6, auto); /* Define 6 rows for images and descriptions */
-  gap: 20px; /* Space between rows */
-  justify-content: center;
-  align-items: center;
-  padding: 1rem; /* Add padding for better spacing */
-}
+  /* About */
+  .grid__container {
+    display: grid;
+    grid-template-rows: repeat(8, auto); /* Define 6 rows for images and descriptions */
+    gap: 20px; /* Space between rows */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Add padding for better spacing */
+  }
 
-/* Images */
-.vsu__seal {
-  border-radius: 100%;
-  width: 25rem; /* Set image width */
-  justify-content: center;
-  align-items: center;
-  grid-row: 1; /* Place in the first row */
-  margin: auto; /* Center image horizontally */
-}
+  /* Images */
+  .vsu__seal,
+  .xdbg__seal,
+  .ai__py,
+  .vsu__gate {
+    border-radius: 100%;
+    width: 100%; /* Make the image fill the width of its grid cell */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+    grid-column: 1 / -1; /* Make the image span the full width of the column */
+    margin: auto; /* Center image horizontally */
+  }
+  
+  .vsu__seal {
+    grid-row: 1; /* Place in the first row */
+  }
+  
+  .xdbg__seal {
+    grid-row: 3; /* Place in the third row */
+  }
+  
+  .ai__py {
+    grid-row: 5; /* Place in the fifth row */
+  }
+  
+  .vsu__gate {
+    grid-row: 7; /* Place in the seventh row */
+  }
+  
 
-.xdbg__seal {
-  border-radius: 100%;
-  width: 25rem; /* Set image width */
-  grid-row: 3; /* Place in the third row */
-  margin: auto; /* Center image horizontally */
-}
+  /* Descriptions */
+  .about__me {
+    text-align: center; /* Center-align text */
+    grid-row: 2; /* Align with the first image */
+    padding: 50px;
+  }
 
-.ai__py {
-  border-radius: 100%;
-  width: 32rem; /* Set image width */
-  grid-row: 5; /* Place in the fifth row */
-  margin: auto; /* Center image horizontally */
-}
+  .about__technical {
+    text-align: center; /* Center-align text */
+    grid-row: 4; /* Align with the second image */
+    padding: 50px;
+  }
 
-/* Descriptions */
-.about__me {
-  text-align: center; /* Center-align text */
-  grid-row: 2; /* Align with the first image */
-  padding: 50px;
-}
+  .about__vision {
+    text-align: center; /* Center-align text */
+    grid-row: 6; /* Align with the third image */
+    padding: 50px;
+  }
 
-.about__technical {
-  text-align: center; /* Center-align text */
-  grid-row: 4; /* Align with the second image */
-  padding: 50px;
-}
+  .about__render{
+    text-align: center; /* Center-align text */
+    grid-row: 8; /* Align with the third image */
+    padding: 50px;
+  }
 
-.about__vision {
-  text-align: center; /* Center-align text */
-  grid-row: 6; /* Align with the third image */
-  padding: 50px;
-}
+  .scroll__notice.hidden {
+  opacity: 0%;
+  visibility: hidden;
+  }
+  .scroll__notice {
+    background-color: var(--primary-color-dark);
+    opacity: 90%;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    position: fixed;
+    width: 200px;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    transition: 0.5s ease; /* Updated duration */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
 }

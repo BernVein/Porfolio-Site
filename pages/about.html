@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="../style.css" />
-    <title>Web Design Mastery | Responsive Portfolio</title>
+    <title>About Me</title>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -19,12 +19,17 @@
             <input type="checkbox" name="check" id="check" />
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">About Me</a></li>
                 <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Scrollable notice -->
+    <div class="scroll__notice" id="scrollNotice">
+        Scroll down to explore more!
+    </div>
 
     <!--Content-->
     <section class="section">
@@ -43,7 +48,24 @@
             <p class="about__vision about__description grid__item">
                 I am passionate about becoming an <strong>AI engineer</strong> or <strong>scientist</strong>. My goal is to deepen my expertise in <strong>artificial intelligence</strong>, <strong>software engineering</strong>, <strong>cryptography</strong>. I aim to work on innovative projects that blend creativity with technology to create impactful solutions. Committed to continuous growth, I stay updated with industry trends and seek opportunities to apply my knowledge effectively.
             </p>
+
+            <img class="grid__item vsu__gate" src="../assets/vsugate.jpg" alt="VSU Gate 3D Render">
+            <p class="about__render about__description grid__item">
+                I am also deeply passionate about creating<strong> 3D animations</strong>, <strong>visual effects</strong>, and <strong>graphics programming</strong>. I thrive on exploring new techniques and pushing the boundaries of visual storytelling. My enthusiasm for animation drives me to continually refine my skills and experiment with unique approaches to bring dynamic and captivating visuals to life.
+            </p>
         </div>
     </section>
+
+    <script>
+        document.addEventListener("scroll", function() {
+            const scrollNotice = document.getElementById("scrollNotice");
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 50) {
+                scrollNotice.classList.add("hidden");
+            }
+        });
+
+    </script>
 </body>
 </html>
