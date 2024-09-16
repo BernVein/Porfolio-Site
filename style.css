@@ -129,6 +129,19 @@ ul li a:hover {
   justify-content: center;
 }
 
+
+.content__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.content__container__about{
+  gap: 5px;
+  padding: 50px;
+}
+
 .subtitle {
   letter-spacing: 2px;
   color: var(--text-light);
@@ -237,10 +250,6 @@ ul li a:hover {
   width: 32rem;
 }
 
-.about__description {
-  padding: 50px;
-}
-
 .about__me {
   text-align: start;
   grid-column: 2;
@@ -265,11 +274,11 @@ ul li a:hover {
 }
 
 .vsu__gate{
-  grid-row: 4;
-  grid-column: 2;
   border-radius: 100%;
   width: 30rem;
   margin-bottom: 50px;
+  grid-row: 4;
+  grid-column: 2;
 }
 
 .about__render{
@@ -300,8 +309,6 @@ ul li a:hover {
   opacity: 0%;
   visibility: hidden;
 }
-
-
 
 
 @media (max-width: 750px) {
