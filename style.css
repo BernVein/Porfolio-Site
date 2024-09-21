@@ -662,7 +662,7 @@ textarea::-webkit-scrollbar-thumb{
   }
 
   .description__about{
-    font-size: .5rem;
+    font-size: .7rem;
   }
 
   /* Images */
@@ -693,14 +693,20 @@ textarea::-webkit-scrollbar-thumb{
   .vsu__gate {
     grid-row: 7; /* Place in the seventh row */
   }
-  
 
+
+  .description{
+    font-size: .7rem;
+    line-height: 1.5;
+  }
   /* Descriptions */
   .about__me {
     text-align: center; /* Center-align text */
     grid-row: 2; /* Align with the first image */
     padding: 50px;
   }
+  
+
 
   .about__technical {
     text-align: center; /* Center-align text */
