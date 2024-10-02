@@ -28,10 +28,6 @@
         </div>
     </nav>
 
-    <!-- Scrollable notice -->
-    <div class="scroll__notice" id="scrollNotice">
-        Scroll down to explore more!
-    </div>
 
     <!--Content-->
     <section class="section">
@@ -71,14 +67,7 @@
     </section>
 
     <script>
-        document.addEventListener("scroll", function() {
-            const scrollNotice = document.getElementById("scrollNotice");
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > 50) {
-                scrollNotice.classList.add("hidden");
-            }
-        });
+       
 
     </script>
 </body>
